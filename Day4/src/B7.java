@@ -5,6 +5,7 @@ import java.util.Scanner;
  */
 public class B7 {
     public static void main(String[] args) {
+        int[] a= new int[9];
         Scanner sc=new Scanner(System.in);
         System.out.println("Nhập xâu:");
         String str=sc.nextLine();

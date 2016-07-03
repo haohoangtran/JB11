@@ -24,5 +24,6 @@ public class B21 {
         in(age);
 
 
+
     }
 }
