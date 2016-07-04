@@ -5,18 +5,21 @@ import java.util.Scanner;
  */
 public class b4 {
     public static boolean isSorted(int[] array) {
-        int dem=0;
-        int i=0;
-
-        while ((i<=array.length-2)&&array[i] < array[i + 1]) {
+        int dem = 0;
+        int i = 0;
+        if (array.length == 0)
+            return true;
+        else {
+            while ((i <= array.length - 2) && array[i] <= array[i + 1]) {
                 dem = i;
                 i++;
             }
-        if (dem==array.length-2)
-            return  true;
-        else
-            return false;
+            if (dem == array.length - 2)
+                return true;
+            else
+                return false;
         }
+    }
 
 
     public static void main(String[] args) {

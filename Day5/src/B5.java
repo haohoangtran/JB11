@@ -7,18 +7,22 @@ public class B5 {
     public static int getNumber(int[] arr,int number) {
         int dem=0;
         for (int i=0;i<arr.length;i++) {
-            if (number==arr[i])
+            if (number==arr[i]) {
+
+            arr[i]=0;
                 dem++;
+        }
         }
         return dem;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập vào các số từ 0 đến 100: ");
-        int[] arr;
+        int[] arr,b;
         String[] str;
         int i = 0;
         arr = new int[100];
+        b=new  int[100];
         do {
             int n = sc.nextInt();
             if (n == 0)
@@ -27,9 +31,13 @@ public class B5 {
             i++;
         } while (arr[i - 1] != 0);
 
-        for (int j=0;j<i;j++){
+        int pos=0;
 
+        for (int j=0;j<i;j++)
+        {
+            if (arr[j]!=0)
             System.out.println("Số "+arr[j]+" xuất hiện "+getNumber(arr,arr[j])+" lần!");
+
         }
     }
 }
