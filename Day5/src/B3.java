@@ -94,7 +94,5 @@ public class B3 {
                 System.out.println("Mã thẻ không hợp lệ!");
             }
         } while (number != 0);
-
-
     }
 }
