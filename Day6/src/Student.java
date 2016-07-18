@@ -8,7 +8,8 @@ public class Student {
     private String Gender;
     private String Address;
     private int StudentCode;
-    Scanner input=new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
+
     public Student() {
     }
 
@@ -32,6 +33,7 @@ public class Student {
     public void setAddress(String address) {
         this.Address = address;
     }
+
     public void InputStudent() {
         System.out.println("Nhập mã sinh viên: ");
         StudentCode = input.nextInt();

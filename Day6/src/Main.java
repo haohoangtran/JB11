@@ -1,6 +1,7 @@
 /**
  * Created by tranh on 11-Jul-16.
  */
+
 import java.util.Scanner;
 
 public class Main {
@@ -61,7 +62,7 @@ public class Main {
                     System.out.println("Chèn thành công!\n\n");
                     break;
                 default:
-                    if (choose!=0)
+                    if (choose != 0)
                         System.out.println("Nhập sai! Nhấn phím bất kì để thoát chương trình!");
                     else
                         System.out.println("Đã thoát!");

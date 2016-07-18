@@ -4,12 +4,14 @@
 public class PhoneEntry {
     private String name;
     private String phoneNumber;
+
     public PhoneEntry() {
 
     }
-    public PhoneEntry(String name,String phoneNumber) {
-        this.name=name;
-        this.phoneNumber=phoneNumber;
+
+    public PhoneEntry(String name, String phoneNumber) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPhoneNumber() {
@@ -27,7 +29,8 @@ public class PhoneEntry {
     public void setName(String name) {
         this.name = name;
     }
-    public String toString(String name,String phoneNumber) {
-        return "Tên: "+name+"\n"+"Số điện thoại: "+phoneNumber+" \n"+"-------------\n";
+
+    public String toString(String name, String phoneNumber) {
+        return "Tên: " + name + "\n" + "Số điện thoại: " + phoneNumber + " \n" + "-------------\n";
     }
 }

@@ -1,7 +1,9 @@
 /**
  * Created by tranh on 11-Jul-16.
  */
+
 import java.util.Scanner;
+
 public class StudentManager {
     public int length = 0;
     Student[] students = new Student[100];
@@ -10,7 +12,7 @@ public class StudentManager {
     String address;
     int studentcode;
 
-    Scanner sc=new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
     public StudentManager() {
     }

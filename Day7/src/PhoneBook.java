@@ -3,7 +3,7 @@
  */
 public class PhoneBook {
     private int numberOfEntries;
-    private PhoneEntry[] phoneEntries=new PhoneEntry[numberOfEntries];
+    private PhoneEntry[] phoneEntries = new PhoneEntry[numberOfEntries];
 
 
     public PhoneBook() {

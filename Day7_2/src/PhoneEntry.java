@@ -5,25 +5,28 @@ import java.util.ArrayList;
  */
 public class PhoneEntry {
     public String name;
-    public ArrayList<String> phoneNumber=new ArrayList();
+    public ArrayList<String> phoneNumber = new ArrayList();
+
     public PhoneEntry() {
 
     }
-    public PhoneEntry(String name,String phoneNumber) {
-        this.name=name;
+
+    public PhoneEntry(String name, String phoneNumber) {
+        this.name = name;
         this.phoneNumber.add(phoneNumber);
     }
+
     public ArrayList<String> getPhoneNumber() {
         return phoneNumber;
 
     }
 
     public String getPhoneNumberString() {
-       String getphoneNumber="";
-        for (int i=0;i<phoneNumber.size();i++) {
-            getphoneNumber=getphoneNumber+phoneNumber.get(i).toString()+" ";
+        String getphoneNumber = "";
+        for (int i = 0; i < phoneNumber.size(); i++) {
+            getphoneNumber = getphoneNumber + phoneNumber.get(i).toString() + " ";
         }
-        return getphoneNumber+"\n";
+        return getphoneNumber + "\n";
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -38,12 +41,13 @@ public class PhoneEntry {
     public void setName(String name) {
         this.name = name;
     }
-    public String toString(String name,ArrayList<String> phoneNumber) {
-        String contact=name+"\n Số điện thoại: ";
-        for (int i=0;i<phoneNumber.size();i++) {
-            contact=contact+phoneNumber.get(i).toString()+" ";
+
+    public String toString(String name, ArrayList<String> phoneNumber) {
+        String contact = name + "\n Số điện thoại: ";
+        for (int i = 0; i < phoneNumber.size(); i++) {
+            contact = contact + phoneNumber.get(i).toString() + " ";
         }
-        contact=contact+"\n--------\n";
+        contact = contact + "\n--------\n";
         return contact;
     }
 }
