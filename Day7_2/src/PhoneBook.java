@@ -132,5 +132,32 @@ public class PhoneBook {
         }
         return str;
     }
+    public boolean editNumber(String oldNumber,String newNumber) {
+        if (phoneEntries.size() == 0)
+            return false;
+        for (int i = 0; i < phoneEntries.size(); i++) {
+            if (phoneEntries.get(i).getPhoneNumberString().indexOf(oldNumber) != -1) {
+                ArrayList<String> arrayList = phoneEntries.get(i).getPhoneNumber();
+                for (int j = 0; j < arrayList.size(); j++) {
+                    if (arrayList.get(j).equals(oldNumber)) {
+                        arrayList.add(newNumber);
+                        arrayList.remove(j);
+                        return true;
+                    }
+                }
+            }
+
+        }
+        return false;
+    }
+    public ArrayList<PhoneEntry> findByFirstName(char charOfFirstName) {
+        ArrayList<PhoneEntry> phoneEntriesFindByFirstName=new ArrayList();
+        for (int i=0;i<phoneEntries.size();i++) {
+            if (phoneEntries.get(i).getName().charAt(0)==charOfFirstName||phoneEntries.get(i).getName().charAt(0)==charOfFirstName+32||phoneEntries.get(i).getName().charAt(0)==charOfFirstName-32) {
+                phoneEntriesFindByFirstName.add(phoneEntries.get(i));
+            }
+        }
+       return phoneEntriesFindByFirstName;
+    }
 
 }

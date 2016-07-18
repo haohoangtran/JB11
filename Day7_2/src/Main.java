@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -19,6 +20,8 @@ public class Main {
             System.out.println("5. Tìm kiếm liên hệ.");
             System.out.println("6. Hiển thị tất cả liên hệ.");
             System.out.println("7. Thêm số điện thoại vào tên có sẵn.");
+            System.out.println("8. Sửa số đã có trong danh bạ!");
+            System.out.println("9. Tìm theo chữ cái!");
             System.out.println("0. Thoát.");
             System.out.println("Mời lựa chọn chức năng: ");
             choose=sc.nextInt();
@@ -103,7 +106,37 @@ public class Main {
                                System.out.println("Không thêm được!");
                         }
                         break;
+                    case 8:
+                        sc.nextLine();
+                        System.out.println("Nhập Sdt cṹ: ");
+                        String oldNumber=sc.nextLine();
+                        System.out.println("Nhập Sdt mới: ");
+                        String newNumber=sc.nextLine();
+                        if (phoneBook.editNumber(oldNumber,newNumber)) {
+                            System.out.println("Đã sửa số "+oldNumber+" thành "+newNumber);
+                        }
+                        else
+                            System.out.println("Không thể sửa!");
+                        break;
+                    case 9:
+                        sc.nextLine();
+                        System.out.println("Nhập chữ cái: ");
+                        String strFind=sc.nextLine();
+                        ArrayList<PhoneEntry> phoneEntryArrayList=phoneBook.findByFirstName(strFind.charAt(0));
+                        if (phoneEntryArrayList.size()==0)
+                            System.out.println("Không tìm thấy!");
+                        else {
+                            for (int i=0;i<phoneEntryArrayList.size();i++) {
+                                System.out.println(phoneEntryArrayList.get(i).toString(phoneEntryArrayList.get(i).getName(),phoneEntryArrayList.get(i).getPhoneNumber()));
+                            }
+                        }
+                        break;
+
+                    default:
+                        break;
                 }
+                if (choose==0)
+                    break;
             }
         }while (true);
 
