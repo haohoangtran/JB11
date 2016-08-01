@@ -26,7 +26,7 @@ public class PhoneBook {
             return false;
         } else {
             for (int i = 0; i < phoneEntries.size(); i++) {
-                if (phoneEntries.get(i).getPhoneNumber().indexOf(entryNumber) != -1) {
+                if (phoneEntries.get(i).getPhoneNumberString().indexOf(entryNumber+" ")!=-1) {
                     return true;
                 }
             }
