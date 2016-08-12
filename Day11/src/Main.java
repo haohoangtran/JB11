@@ -9,7 +9,5 @@ public class Main {
         Account account = new Account("1", "Hao", 12345, 10000);
         account.setPhoneNumber("0123456789");
         PaymentStrategy paymentStrategy = new MobileBankingStrategy("0123456789", 12345);
-
-
     }
 }
